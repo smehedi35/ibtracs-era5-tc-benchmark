@@ -16,28 +16,28 @@ Reproducible: simple scripts, dictionary, and task splits designed for baseline 
 
 HURRICANE_PROJECT/
 ├─ data/
-│  ├─ era5/
-│  │  ├─ era5_2000-2004.nc
-│  │  ├─ era5_2005-2009.nc
-│  │  ├─ era5_2010-2014.nc
-│  │  ├─ era5_2015-2019.nc
-│  │  └─ era5_2020-2024.nc
-│  └─ IBTrACS.ALL.v04r01.nc
+│ ├─ era5/
+│ │ ├─ era5_2000-2004.nc
+│ │ ├─ era5_2005-2009.nc
+│ │ ├─ era5_2010-2014.nc
+│ │ ├─ era5_2015-2019.nc
+│ │ └─ era5_2020-2024.nc
+│ └─ IBTrACS.ALL.v04r01.nc
 ├─ notebooks/
-│  └─ 01_load_ibtracs.ipynb
+│ └─ 01_load_ibtracs.ipynb
 ├─ outputs/
-│  ├─ model_ready_2000_2024_v2.parquet
-│  ├─ model_ready_2000_2024_v2_dictionary.csv
-│  ├─ DATA_DICTIONARY.md
-│  ├─ merged_ibtracs_era5_2000_2024_clean.parquet
-│  └─ tasks/
-│     ├─ tc_intensity_forecast_v1.parquet
-│     ├─ tc_track_forecast_v1.parquet
-│     ├─ tc_ri_classification_v1.parquet
-│     └─ tc_lifecycle_v1.parquet
+│ ├─ model_ready_2000_2024_v2.parquet
+│ ├─ model_ready_2000_2024_v2_dictionary.csv
+│ ├─ DATA_DICTIONARY.md
+│ ├─ merged_ibtracs_era5_2000_2024_clean.parquet
+│ └─ tasks/
+│ ├─ tc_intensity_forecast_v1.parquet
+│ ├─ tc_track_forecast_v1.parquet
+│ ├─ tc_ri_classification_v1.parquet
+│ └─ tc_lifecycle_v1.parquet
 └─ scripts/
-   ├─ build_dataset.py
-   └─ add_targets.py
+├─ build_dataset.py
+└─ add_targets.p
 
 ## Key artifacts
 
