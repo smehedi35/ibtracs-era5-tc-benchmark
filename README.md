@@ -1,5 +1,7 @@
 ## IBTrACS + ERA5 Tropical Cyclone Benchmark (2000–2024)
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/smehedi35/ibtracs-era5-tc-benchmark)
+
 A clean, citable, ML-ready dataset that merges NOAA IBTrACS storm tracks with ERA5 reanalysis at a 6-hour cadence, plus slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction. 
 
 ## Why this dataset
@@ -11,33 +13,6 @@ Forecast targets included: 6 / 12 / 24-hour horizons (e.g., wmo_wind_next6, lat_
 Clear tasks: intensity regression, track regression, RI classification (24 h), and lifecycle classification. 
 
 Reproducible: simple scripts, dictionary, and task splits designed for baseline and advanced models.
-
-## Repository layout
-
-HURRICANE_PROJECT/
-├─ data/
-│ ├─ era5/
-│ │ ├─ era5_2000-2004.nc
-│ │ ├─ era5_2005-2009.nc
-│ │ ├─ era5_2010-2014.nc
-│ │ ├─ era5_2015-2019.nc
-│ │ └─ era5_2020-2024.nc
-│ └─ IBTrACS.ALL.v04r01.nc
-├─ notebooks/
-│ └─ 01_load_ibtracs.ipynb
-├─ outputs/
-│ ├─ model_ready_2000_2024_v2.parquet
-│ ├─ model_ready_2000_2024_v2_dictionary.csv
-│ ├─ DATA_DICTIONARY.md
-│ ├─ merged_ibtracs_era5_2000_2024_clean.parquet
-│ └─ tasks/
-│ ├─ tc_intensity_forecast_v1.parquet
-│ ├─ tc_track_forecast_v1.parquet
-│ ├─ tc_ri_classification_v1.parquet
-│ └─ tc_lifecycle_v1.parquet
-└─ scripts/
-├─ build_dataset.py
-└─ add_targets.p
 
 ## Key artifacts
 
