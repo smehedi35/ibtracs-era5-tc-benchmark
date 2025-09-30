@@ -1,0 +1,77 @@
+## Data Dictionary
+
+### Core identifiers
+
+| column   | dtype               | hint                                          |
+|:---------|:--------------------|:----------------------------------------------|
+| storm_id | object              | Unique storm identifier (e.g., season + name) |
+| season   | int64               | Storm season year (UTC)                       |
+| iso_time | datetime64[ns, UTC] | Advisory time (UTC), 6-hourly grid            |
+
+### Core features (inputs)
+
+| column   | dtype   | hint                                     |
+|:---------|:--------|:-----------------------------------------|
+| lat      | float32 | Storm latitude (°N)                      |
+| lon      | float32 | Storm longitude (°E, −180..180)          |
+| wmo_wind | float32 | Max sustained wind (kt), WMO standard    |
+| wmo_pres | float32 | Central pressure (hPa), WMO standard     |
+| sst_c    | float64 | Sea surface temperature (°C)             |
+| t2m_c    | float64 | 2-m air temperature (°C)                 |
+| msl_hpa  | float64 | Mean sea-level pressure (hPa)            |
+| u10      | float64 | 10-m wind, zonal (m/s)                   |
+| v10      | float64 | 10-m wind, meridional (m/s)              |
+| wind10   | float64 | 10-m wind speed (m/s) = hypot(u10, v10)  |
+| tp       | float64 | Total precipitation (m) over previous 6h |
+
+### Intensity targets
+
+| column              | dtype   | hint                                                 |
+|:--------------------|:--------|:-----------------------------------------------------|
+| wmo_wind_next6      | float32 | Wind (kt) 6h ahead                                   |
+| wmo_wind_next12     | float32 | Wind (kt) 12h ahead                                  |
+| wmo_wind_next24     | float32 | Wind (kt) 24h ahead                                  |
+| max_wmo_wind_next48 | float32 | Max wind (kt) within the next 48h (6..48h ahead)     |
+| ri_next24           | int8    | Rapid Intensification (≥30 kt increase in 24h)       |
+| rw_next24           | int8    | Rapid Weakening (≤−30 kt decrease in 24h)            |
+| major_within48      | int8    | 1 if max_wmo_wind_next48 ≥ 96 kt (Cat 3+) within 48h |
+
+### Track targets
+
+| column     | dtype   | hint                |
+|:-----------|:--------|:--------------------|
+| lat_next6  | float32 | Latitude 6h ahead   |
+| lon_next6  | float32 | Longitude 6h ahead  |
+| lat_next12 | float32 | Latitude 12h ahead  |
+| lon_next12 | float32 | Longitude 12h ahead |
+| lat_next24 | float32 | Latitude 24h ahead  |
+| lon_next24 | float32 | Longitude 24h ahead |
+| lat_next48 | float32 | Latitude 48h ahead  |
+| lon_next48 | float32 | Longitude 48h ahead |
+
+### Horizon masks
+
+| column     | dtype   | hint                  |
+|:-----------|:--------|:----------------------|
+| has_next6  | bool    | Target exists at +6h  |
+| has_next12 | bool    | Target exists at +12h |
+| has_next24 | bool    | Target exists at +24h |
+| has_next48 | bool    | Target exists at +48h |
+
+### Lifecycle & landfall
+
+| column              | dtype   | hint                                     |
+|:--------------------|:--------|:-----------------------------------------|
+| dissipates_within48 | int8    | 1 if no advisory at +48h                 |
+| et_within48         | int8    | 1 if extratropical transition within 48h |
+| landfall_within24   | int8    | Touches land within 24h (ocean→land)     |
+| landfall_within48   | int8    | Touches land within 48h (ocean→land)     |
+
+### Infrastructure & metadata
+
+| column          | dtype    | hint                                             |
+|:----------------|:---------|:-------------------------------------------------|
+| split           | category | train/val/test (storm-level, year-based)         |
+| sample_weight   | float32  | Inverse rows per storm (downweights long storms) |
+| dataset_version | object   | Semantic dataset version (e.g., 2.0.0)           |
+

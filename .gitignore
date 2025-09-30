@@ -1,0 +1,16 @@
+@'
+# Ignore large ERA5 data files
+data/era5/
+*.nc
+
+# Keep IBTrACS metadata
+!data/IBTrACS.ALL.v04r01.nc
+
+# Ignore Parquet outputs that are large (optional, keep only small task files)
+outputs/merged_ibtracs_era5_2000_2024_clean.parquet
+outputs/model_ready_2000_2024_v2.parquet
+
+# General
+*.lock
+.DS_Store
+'@ | Set-Content .gitignore
