@@ -1,8 +1,11 @@
-## IBTrACS + ERA5 Tropical Cyclone Benchmark (2000–2024)
+## IBTrACS + ERA5 Tropical Cyclone Benchmark (USA, 2000–2024)
+
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/smehedi35/ibtracs-era5-tc-benchmark)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239540.svg)](https://doi.org/10.5281/zenodo.17239540)
 
-A clean, citable, ML-ready dataset (USA, 2000–2024) merging NOAA IBTrACS storm tracks with ERA5 reanalysis at 6-hour cadence, with slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction.
+
+A clean, citable, ML-ready dataset merging NOAA IBTrACS storm tracks with ERA5 reanalysis at 6-hour cadence, with slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction.
 
 ## Why this dataset
 
@@ -139,7 +142,7 @@ Code: MIT License.
 
 Dataset version: v2 (covers 2000–2024).
 
-DOI: 10.5281/zenodo.TBD
+DOI: 10.5281/zenodo.17239540
 
 ## Cite this dataset
 
@@ -148,7 +151,7 @@ DOI: 10.5281/zenodo.TBD
   title     = {IBTrACS + ERA5 Tropical Cyclone Benchmark (2000–2024), v2},
   year      = {2025},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.TBD},
+  doi       = {10.5281/zenodo.17239540},
   url       = {https://doi.org/10.5281/zenodo.TBD}
 } 
 
