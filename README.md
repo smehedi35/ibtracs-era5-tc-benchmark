@@ -151,9 +151,8 @@ See DATA_DICTIONARY.md for the exact list of variables included from each source
 
 ## Licensing
 
-Data: CC BY 4.0 (plus IBTrACS/ERA5 attribution)
-
-Code: MIT License. 
+- **Code**: Licensed under the [MIT License](LICENSE).  
+- **Processed Data**: Licensed under [CC-BY 4.0](LICENSE).
 
 ## Versioning & DOI
 
