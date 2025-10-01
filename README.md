@@ -1,9 +1,7 @@
-## IBTrACS + ERA5 Tropical Cyclone Benchmark (USA, 2000–2024)
-
+## IBTrACS + ERA5 Tropical Cyclone Benchmark (North Atlantic Basin, 2000–2024)
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/smehedi35/ibtracs-era5-tc-benchmark)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239540.svg)](https://doi.org/10.5281/zenodo.17239540)
-
 
 A clean, citable, ML-ready dataset merging NOAA IBTrACS storm tracks with ERA5 reanalysis at 6-hour cadence, with slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction.
 
@@ -47,6 +45,25 @@ All tasks are derived from the 6-hour master cadence; 12 h and 24 h targets are 
 - Targets: categorical/end-state flags (e.g., dissipates, extratropical transition) and/or lifecycle_stage where applicable.
 
 Storm-level splits (train/val/test) and sample weights are included to avoid temporal leakage and handle imbalance. See DATA_DICTIONARY.md for exact column names.
+
+## ERA5 scope & variables (for this benchmark)
+
+**Region (North Atlantic TC basin proxy):**  
+- North: **50°N**, South: **0°**, West: **100°W**, East: **10°E**
+
+Temporal coverage:** **2000–2024** (inclusive)  
+Cadence: 6-hourly (**00:00, 06:00, 12:00, 18:00 UTC**)  
+Format: NetCDF4
+
+**Variables used:**
+- 10 m **u-wind** (u10)
+- 10 m **v-wind** (v10)
+- **2 m temperature** (t2m)
+- **Mean sea level pressure** (msl)
+- **Sea surface temperature** (sst)
+- **Total precipitation** (tp)
+
+**Note:** ERA5 raw data are not included in GitHub/Zenodo/Dataverse due to size limits; you can download them directly from [Copernicus CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview).
 
 ## Quickstart
 
