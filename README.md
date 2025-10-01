@@ -51,7 +51,7 @@ Storm-level splits (train/val/test) and sample weights are included to avoid tem
 **Region (North Atlantic TC basin proxy):**  
 - North: **50°N**, South: **0°**, West: **100°W**, East: **10°E**
 
-Temporal coverage:** **2000–2024** (inclusive)  
+Temporal coverage: **2000–2024** (inclusive)  
 Cadence: 6-hourly (**00:00, 06:00, 12:00, 18:00 UTC**)  
 Format: NetCDF4
 
