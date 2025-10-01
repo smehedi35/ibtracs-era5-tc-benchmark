@@ -151,8 +151,8 @@ See DATA_DICTIONARY.md for the exact list of variables included from each source
 
 ## Licensing
 
-- **Code**: Licensed under the [MIT License](LICENSE).  
-- **Processed Data**: Licensed under [CC-BY 4.0](LICENSE).
+- **Code**: Licensed under the [MIT License].  
+- **Processed Data**: Licensed under [CC-BY 4.0].
 
 ## Versioning & DOI
 
