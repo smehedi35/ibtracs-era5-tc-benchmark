@@ -2,7 +2,7 @@
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/smehedi35/ibtracs-era5-tc-benchmark)
 
-A clean, citable, ML-ready dataset that merges NOAA IBTrACS storm tracks with ERA5 reanalysis at a 6-hour cadence, plus slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction. 
+A clean, citable, ML-ready dataset (USA, 2000–2024) merging NOAA IBTrACS storm tracks with ERA5 reanalysis at 6-hour cadence, with slim task subsets for intensity, track, rapid-intensification, and lifecycle prediction.
 
 ## Why this dataset
 
