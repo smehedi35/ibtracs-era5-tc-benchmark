@@ -1,4 +1,4 @@
-## IBTrACS + ERA5 Tropical Cyclone Benchmark (North Atlantic Basin, 2000–2024)
+## North Atlantic Tropical Cyclone Benchmark from IBTrACS + ERA5 (2000–2024): ML‑Ready Dataset, Trained Models, and Evaluation Metrics.
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/smehedi35/ibtracs-era5-tc-benchmark)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239540.svg)](https://doi.org/10.5281/zenodo.17239540)
