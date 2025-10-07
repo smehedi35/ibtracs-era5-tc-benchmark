@@ -1,0 +1,105 @@
+@'
+# ========================================
+# HURRICANE TRACK FORECAST PROJECT
+# .gitignore - Exclude large data/model files
+# ========================================
+
+# ==================== DATA ====================
+# Ignore large ERA5 NetCDF files (too big for GitHub)
+data/era5/
+*.nc
+
+# Keep IBTrACS metadata (small enough)
+!data/IBTrACS.ALL.v04r01.nc
+
+
+# ==================== OUTPUTS ====================
+
+# Exclude large feature files
+outputs/track_forecast/features/*.parquet
+
+# Exclude large prediction files
+outputs/track_forecast/predictions/*.parquet
+
+# Exclude large model files (50-200 MB each)
+outputs/track_forecast/models/*.joblib
+
+# Keep small files (CSVs, PNGs)
+!outputs/track_forecast/metrics/*.csv
+!outputs/track_forecast/figs/*.png
+!outputs/track_forecast/models/feature_importance*.csv
+
+
+# ==================== NOTEBOOKS ====================
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+
+# ==================== PYTHON ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Pytest cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy cache
+.mypy_cache/
+.dmypy.json
+
+
+# ==================== VS CODE ====================
+.vscode/
+*.code-workspace
+
+
+# ==================== SYSTEM ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# General
+*.lock
+*.log
+*.tmp
+*~
+.idea/
+
+
+# ==================== JUPYTER ====================
+# Jupyter Notebook
+*.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+
+# ==================== KEEP THESE ====================
+# Force-include important small files
+!README.md
+!requirements.txt
+!LICENSE
+!DATA_LICENSE
+!.gitattributes
+!configs/*.yaml
+'@ | Set-Content .gitignore -Encoding UTF8

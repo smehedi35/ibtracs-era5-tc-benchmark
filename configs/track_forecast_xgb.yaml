@@ -1,0 +1,34 @@
+# ==== DATA INPUTS ====
+source_path: merged_ibtracs_era5_2000_2024_clean.parquet
+split_path: data/splits/track_split_v1.json
+features_out: outputs/track_forecast/features/track_features_2000_2024.parquet
+
+# REQUIRED columns in source parquet (no exceptions)
+columns:
+  id: storm_id
+  time: time
+  lat: lat
+  lon: lon
+  vmax: vmax
+  mslp: mslp
+  sst: sst
+  slp: slp
+  rh700: rh700
+  u200: u200
+  v200: v200
+  u500: u500
+  v500: v500
+  u850: u850
+  v850: v850
+  shear_200_850: shear_200_850
+
+# Year window used by the dataset
+years:
+  start: 2000
+  end: 2024
+
+# Horizon is fixed at the IBTrACS step
+target_horizon_hours: 6
+
+# OUTPUT ROOT
+out_dir: outputs/track_forecast
