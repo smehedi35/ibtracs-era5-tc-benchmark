@@ -6,8 +6,9 @@
 
 # ==================== DATA ====================
 # Ignore large ERA5 NetCDF files (too big for GitHub)
-data/era5/
-*.nc
+!data/splits/
+!data/splits/**
+
 
 # Keep IBTrACS metadata (small enough)
 !data/IBTrACS.ALL.v04r01.nc
